@@ -1,0 +1,131 @@
+    <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Find Your Business Partners</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/site_css.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+        <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+
+         <script>
+    $(document).ready(function() {
+//sign in form 
+        $('.signin').click(function() {
+            document.querySelector('.signinform').style.display = 'block';
+        });
+        $('#signincancel').click(function() {
+            document.querySelector('.signinform').style.display = 'none';
+        });                 
+//end of sign in form
+        
+//join us form
+        $('.joinus').click(function() {
+            document.querySelector('.joinusform').style.display = 'block';
+        });
+        $('#joinuscancel').click(function() {
+            document.querySelector('.joinusform').style.display = 'none';
+        });
+        $('#joinusform-container').validate({
+           rules: {
+               confirm_psw: {
+                   equalTo: '#psw'
+               }
+           },
+           messages: {
+               confirm_psw: {
+                   equalTo:'<u><b>Two Passwords do not match</b></u>'
+               }
+           }
+        }); 
+//end of join us form
+
+    }); 
+    </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="main">
+                    <div class="logo">
+                        <a href="main.html"><img src="pictures/logo.png"></a>
+                    </div>
+                    <ul id="signin_ul">
+                        <li class="signin"><a href="#">Sign In</a></li>
+                        <li class="joinus"><a href="#">JOIN US</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="signinform">
+                <form class="signinform-container">
+                     <h1>Login</h1>
+
+                     <label for="email"><b><u>Email</u></b></label>
+                     <input type="text" placeholder="Enter Email" name="email" required>
+
+                     <label for="psw"><b><u>Password</u></b></label>
+                     <input type="password" placeholder="Enter Password" name="psw" required>
+
+                     <button type="submit" class="btn">Login</button>
+                     <button type="button" class="btn" id="signincancel">Close</button>
+                </form>
+            </div>
+            
+            <div class="joinusform">
+                <form id="joinusform-container">
+                     <h1>Join Us</h1>
+
+                     <label for="email"><b><u>Email</u></b></label>
+                     <input type="text" placeholder="Enter Email" name="email" required>
+
+                     <label for="psw"><b><u>Password</u></b></label>
+                     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                
+                     <label for="confirm_psw"><b><u>Confirm Password</u></b></label>
+                     <input type="password" placeholder="Enter Your Password Again" name="confirm_psw" id="confirm_psw" required>
+
+                    <button type="submit" class="btn" id="joinussignup">Sign Up</button>
+                    <button type="button" class="btn" id="joinuscancel">Close</button>
+                </form>
+            </div>
+            
+            
+        <div class="search_engine">
+             <form>
+                <h1 id="search_text">Start To Find Your Business Partners</h1> 
+                    <div class="engine_box">
+                        <input id="search_engine_words" name="search" type="text" placeholder="   Search Here...">
+                        <button onclick="location.href='main2.html'" id="search_engine_button" type="button">Search</button>
+                    </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="introduction">
+            <h1 id="introduction_words">Why Should You Use It?</h1>
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/UVxU2HzPGug" frameborder="0" allowfullscreen></iframe>
+            <button onclick="location.href='main2.html'" id="letgetstarted" type="button">Let's Get Started</button>
+        </div>
+  
+        <footer>
+            <ul id="social_icons">
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a>
+                <li><a href="#"><i class="fab fa-instagram"></i></a>
+                <li><a href="#"><i class="fab fa-youtube"></i></a>
+            </ul>
+            <ul id="footer_menu">
+                <li><a href="#"><u>Home</u></a></li>
+                <li><a href="#"><u>About Us</u></a></li>
+                <li class="signin"><a href="#"><u>Sing In</u></a></li>
+                <li class="joinus"><a href="#"><u>Join Us</u></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

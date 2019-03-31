@@ -1,0 +1,123 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019年3月22日, 下午05:04:13
+    Author     : pakkitchan
+*/
+
+#header_search {
+    float: left;
+
+}
+
+#header_search_words {
+    height: 25px;
+    width: 300px;
+    margin-left: 35px;
+    margin-top: 45px;
+
+}
+
+#header_search_button {
+    height: 25px;
+    width: 100px;
+    background: #f44336;
+    border: none;
+    color: #fff;
+    position: relative;
+
+}
+
+#header_search_button:hover {
+    background: #bb0d00;
+    cursor: pointer;
+}
+
+#blank1 {
+    height: 100px;
+    width: 100%;
+}
+
+.slection_bar {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    padding: 0px;
+    border-top: #A9A9A9 solid 2px;
+    border-bottom: #A9A9A9 solid 2px;
+}
+
+#slection_bar_list {
+    width: 100%;
+}
+
+#slection_bar_list li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#slection_bar_list li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+
+}
+
+#slection_bar_list li a:hover {
+    color: #A9A9A9;
+}
+
+#find_your_partners_words{
+    margin-left: 60px;
+}
+
+#find_your_partners_button {
+    height: 50px;
+    width: 150px;
+    background: #4CAF50;
+    border: none;
+    color: #fff;
+    position: relative;
+    font-size: 20px;
+    margin-left: 140px;
+    opacity: 0.8;
+}
+
+#find_your_partners_button:hover {
+    opacity: 1;
+}
+
+#blank2 {
+    width: 100%;
+    height: 1px;
+    background-color: #A9A9A9;
+    margin-top: 20px;
+}
+
+#project_list {
+    width: 100%;
+    background-color: white;
+    height: 1000px;
+}
+
+
+#project_list ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin-left: 100px;
+    border: 1px solid #DCDCDC;
+    padding: 20px 100px 20px 5px;
+    background-color: #DCDCDC;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-right: 100px;
+}
+
+
+
+

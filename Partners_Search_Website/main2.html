@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Find Your Business Partners</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/site_css.css" rel="stylesheet">
+        <link href="css/main2_css.css" rel="stylesheet">
+        <link href="css/findpartnersform_css.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+        <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="_js/main2_js.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+//sign in form 
+        $('.signin').click(function() {
+            document.querySelector('.signinform').style.display = 'block';
+        });
+        $('#signincancel').click(function() {
+            document.querySelector('.signinform').style.display = 'none';
+        });                 
+//end of sign in form
+        
+//join us form
+        $('.joinus').click(function() {
+            document.querySelector('.joinusform').style.display = 'block';
+        });
+        $('#joinuscancel').click(function() {
+            document.querySelector('.joinusform').style.display = 'none';
+        });
+        $('#joinusform-container').validate({
+           rules: {
+               confirm_psw: {
+                   equalTo: '#psw'
+               }
+           },
+           messages: {
+               confirm_psw: {
+                   equalTo:'<u><b>Two Passwords do not match</b></u>'
+               }
+           }
+        }); 
+//end of join us form
+        $('.hide').hide();
+
+
+        
+        }); 
+
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="main">
+                    <div class="logo">
+                        <a href="main.html"><img src="pictures/logo.png"></a>
+                    </div>
+                    <div id="header_search">
+                        <form>
+                          <input id="header_search_words" name="search" type="text" placeholder="   Search Here...">
+                          <button onclick="location.href='main2.html'" id="header_search_button" type="button">Search</button>
+                        </form>
+                    </div>
+                    <ul id="signin_ul">
+                        <li class="signin"><a href="#">Sign In</a></li>
+                        <li class="joinus"><a href="#">JOIN US</a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        
+        <div class="signinform">
+              <form class="signinform-container">
+                  
+                  <h1>Login</h1>
+
+                  <label for="email"><b><u>Email</u></b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b><u>Password</u></b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+             <button type="submit" class="btn">Login</button>
+             <button type="button" class="btn" id="signincancel">Close</button>
+          </form>
+        </div>
+        
+        <div class="joinusform">
+            <form id="joinusform-container">
+                <h1>Join Us</h1>
+
+                <label for="email"><b><u>Email</u></b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b><u>Password</u></b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                
+                <label for="confirm_psw"><b><u>Confirm Password</u></b></label>
+                <input type="password" placeholder="Enter Your Password Again" name="confirm_psw" id="confirm_psw" required>
+
+               <button type="submit" class="btn" id="joinussignup">Sign Up</button>
+               <button type="button" class="btn" id="joinuscancel">Close</button>
+            </form>
+        </div>
+        <div id="blank1"></div>
+        
+        <div class="slection_bar">
+            <ul id="slection_bar_list">
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Marketing & Advertising</a></li>
+                <li><a href="#"> Writing</a></li>
+                <li><a href="#">Video Making</a></li>
+                <li><a href="#">Animation</a></li>
+                <li><a href="#">Programming & IT</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Other</a></li>
+            </ul>   
+        </div>
+        
+        <div class="find_your_partners">
+            <h1 id="find_your_partners_words"><b>Find You Partners Here !</b></h1>
+            <button  id="find_your_partners_button" type="button"><i class="fas fa-plus-circle"></i>  Add a Post</button>          
+        </div>
+        
+        <div id="blank2"></div>
+        
+        <div class="find_partners_form">
+            <form id="findpartnersform-container">
+                
+                <a href="#" id="find_partners_form_close"><i class="fas fa-times"></i></a>
+                
+                <h1>What Are You Looking For?</h1>
+                <div>
+                <label for="form_title" class="label">Title: </label>
+                <input type="text" id="form_title" name="form_title" required>
+                </div>
+                <div>
+                <label for="form_type" class="label">Type: </label>
+                <select name="form_type" id="form_type" required>
+                    <option>Business</option>
+                    <option>Marketing & Advertising</option>
+                    <option>Writing</option>
+                    <option>Video Making</option>
+                    <option>Animation</option>
+                    <option>Programming & IT</option>
+                    <option>Music</option>
+                    <option>Other</option>
+                </select>
+                </div>
+                <div>
+                <label for="form_projectcontent" class="label">Contents & Requirements: </label>
+                <textarea name="form_projectcontent" id="form_projectcontent" rows="5" cols="50"></textarea>
+                </div>
+                <div>
+                <label for="form_deadline" class="label">Deadline: </label>
+                <input type="text" id="form_deadline" name="form_deadline">
+                </div>
+                <h2>Contact Information</h2>
+                <div>
+                <label for="form_name" class="label">Name: </label>
+                <input type="text" id="form_name" name="form_name" required>
+                </div>
+                <div>
+                <label for="form_email" class="label">Email: </label>
+                <input type="text" name="form_email" required>
+                </div>
+                <div>
+                <label for="form_tel" class="label">Contact Number: </label>
+                <input type="text" name="form_tel" required>
+                </div>
+                
+                <button type="button" id="find_partners_form_button">Submit</button>       
+            </form>
+        </div>
+        
+        <div id="project_list">
+            <ul id="project_lists">
+                <li class="show"><span id="showmore"><i class="fas fa-plus"></i></span>  Project Title : Partners Search Website</li>
+                <li class="hide"> Type : Programming & IT </li>
+                <li class="hide"> Contents & Requirements : Building a website that allow people to find their project partners, we need people with the skills of website programming.</li>
+                <li class="hide"> Deadline : 06/07/2019</li>
+                <li class="hide"> Hoster's name : Mr Chan, Kelvin</li>
+                <li class="hide"> Contact Email : iamcpk1145@gmail.com</li>
+                <li class="hide"> Contact Number : 92474024</li>
+            </ul>
+ 
+        </div>
+        
+            <footer>
+            <ul id="social_icons">
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a>
+                <li><a href="#"><i class="fab fa-instagram"></i></a>
+                <li><a href="#"><i class="fab fa-youtube"></i></a>
+            </ul>
+            <ul id="footer_menu">
+                <li><a href="#"><u>Home</u></a></li>
+                <li><a href="#"><u>About Us</u></a></li>
+                <li class="signin"><a href="#"><u>Sing In</u></a></li>
+                <li class="joinus"><a href="#"><u>Join Us</u></a></li>
+            </ul>
+        </footer>
+
+   
+        </body>
+</html>

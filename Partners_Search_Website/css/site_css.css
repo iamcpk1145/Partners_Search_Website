@@ -1,0 +1,321 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019年3月19日, 下午03:38:25
+    Author     : pakkitchan
+*/
+body {
+    margin:0;
+    padding:0;
+}
+header {
+    background-color:black;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    vertical-align: middle;
+    font-size: 25px;
+    z-index: 50;
+
+
+}
+
+#footer_menu li, #social_icons li {
+    display: inline-block;
+    padding:5px 20px; 
+
+}
+
+#footer_menu li a, #social_icons li a{
+    color: #fff;
+
+}
+
+#footer_menu li {
+    margin-top: 20px;
+}
+
+#signin_ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+#signin_ul li {
+    display: inline-block;
+
+}
+
+#signin_ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding:5px 20px;
+    transition: 0.6s ease;
+    
+}
+
+#joinus_li {
+    border: 1px solid #fff;
+
+}
+
+header li a:hover{
+    opacity: 0.3;
+
+    
+}
+
+#joinus_li:hover{
+    border: 1px solid #fff;
+
+}
+
+.logo img{
+    float: left;
+    width : 250px;
+    height: 80px;
+    margin-left:50px;
+    margin-top: 20px;
+    
+}
+
+.main{
+    max-width: 1200px;
+    margin-right: 100px;
+}
+
+.search_engine{
+    height: 100vh;
+    background-image: url('../pictures/body_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+
+}
+
+#search_text {
+    text-align: center;
+    color: #000;
+    margin-bottom: 70px;
+    font-size: 45px;
+    lettre-specing: 2px
+}
+
+#search_engine_words {
+    height: 50px;
+    heading: 10px;
+    width: 600px;
+    font-size: 15px;
+}
+
+#search_engine_button {
+    height: 50px;
+    width: 150px;
+    background: #f44336;
+    border: none;
+    color: #fff;
+    position: relative;
+
+ 
+}
+
+#search_engine_button:hover {
+    background: #bb0d00;
+    cursor: pointer;
+}
+
+.engine_box {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px 50px;
+}﻿
+
+.introduction {
+    position: relative;
+    background-color: #fff;
+}
+
+#introduction_words {
+    margin-left: 460px;
+    margin-top: 45px;
+    font-size: 45px;
+}
+
+iframe {
+    margin-left: 225px;
+    padding-top: 40px;
+}
+
+#letgetstarted {
+    height: 100px;
+    width: 250px;
+    background: #f44336;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 20px;
+    margin-left: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer {
+    width: 100%;
+    height: 125px;
+    background-color: #000;
+    bottom: 0%;
+    margin-bottom: 0px;
+
+
+}
+
+footer #footer_menu {
+    font-size: 20px;
+    float: left;
+
+}
+
+footer #social_icons {
+    font-size: 40px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 35px;
+}
+
+.signinform {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 100;
+}
+
+.signinform .signinform-container {
+  margin-top: 200px;
+  margin-left: 500px;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  opacity: 1;
+}
+
+.signinform-container h1 {
+    text-align: center;
+}
+
+.signinform-container input[type=text], .signinform-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.signinform-container input[type=text]:focus, .signinform-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.signinform-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.signinform-container #signincancel {
+  background-color: red;
+}
+
+.signinform-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.joinusform {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 100;
+}
+
+.joinusform #joinusform-container {
+  margin-top: 200px;
+  margin-left: 500px;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  opacity: 1;
+}
+
+#joinusform-container h1 {
+    text-align: center;
+}
+
+#joinusform-container input[type=text], #joinusform-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+#joinusform-container input[type=text]:focus, .joinusform-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#joinusform-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+
+#joinusform-container #joinuscancel {
+  background-color: red;
+}
+
+#joinusform-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+label.error {
+     color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
